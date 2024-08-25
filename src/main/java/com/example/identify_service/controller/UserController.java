@@ -3,6 +3,7 @@ package com.example.identify_service.controller;
 import com.example.identify_service.dto.request.ApiResponse;
 import com.example.identify_service.dto.request.UserCreationRequest;
 import com.example.identify_service.dto.request.UserUpdateRequest;
+import com.example.identify_service.dto.response.UserResponse;
 import com.example.identify_service.entity.User;
 import com.example.identify_service.service.UserService;
 import jakarta.validation.Valid;
@@ -35,12 +36,12 @@ public class UserController {
     }
 
     @GetMapping("/{userId}")
-    User getUser(@PathVariable("userId") String userId) {
+    UserResponse getUser(@PathVariable("userId") String userId) {
         return userService.getUser(userId);
     }
 
     @PutMapping("/{userId}")
-    User updateUser(@PathVariable String userId,@RequestBody UserUpdateRequest request) {
+    UserResponse updateUser(@PathVariable String userId,@RequestBody UserUpdateRequest request) {
         return userService.updateUser(userId, request);
     }
 
