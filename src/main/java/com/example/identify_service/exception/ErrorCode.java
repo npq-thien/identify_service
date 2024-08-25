@@ -1,11 +1,5 @@
 package com.example.identify_service.exception;
 
-import lombok.Data;
-import lombok.Getter;
-import lombok.Setter;
-
-@Getter
-@Setter
 public enum ErrorCode {
     USER_EXISTED(1001, "User exists"),
     USER_NOT_EXISTED(1002, "User not exists");
@@ -16,6 +10,22 @@ public enum ErrorCode {
 
     ErrorCode(int code, String message) {
         this.code = code;
+        this.message = message;
+    }
+
+    public int getCode() {
+        return code;
+    }
+
+    public void setCode(int code) {
+        this.code = code;
+    }
+
+    public String getMessage() {
+        return message;
+    }
+
+    public void setMessage(String message) {
         this.message = message;
     }
 }
