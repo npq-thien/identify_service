@@ -2,7 +2,8 @@ package com.example.identify_service.exception;
 
 public enum ErrorCode {
     USER_EXISTED(1001, "User exists"),
-    USER_NOT_EXISTED(1002, "User not exists");
+    USER_NOT_EXISTED(1002, "User not exists"),
+    UNAUTHENTICATED(1003, "Unauthenticated"),
     ;
 
     private int code;

@@ -1,4 +1,4 @@
-package com.example.identify_service.dto.response;
+package com.example.identify_service.dto.request;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -9,7 +9,6 @@ import lombok.NoArgsConstructor;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class AuthenticationResponse {
+public class IntrospectRequest {
     private String token;
-    private boolean authenticated;
 }
